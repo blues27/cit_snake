@@ -1,0 +1,277 @@
+[0.000000] (-) TimerEvent: {}
+[0.000448] (robotfield_description) JobQueued: {'identifier': 'robotfield_description', 'dependencies': OrderedDict()}
+[0.000606] (snake_robot_cit_description) JobQueued: {'identifier': 'snake_robot_cit_description', 'dependencies': OrderedDict()}
+[0.000779] (robotfield_description) JobStarted: {'identifier': 'robotfield_description'}
+[0.043105] (snake_robot_cit_description) JobStarted: {'identifier': 'snake_robot_cit_description'}
+[0.087107] (robotfield_description) JobProgress: {'identifier': 'robotfield_description', 'progress': 'cmake'}
+[0.099012] (-) TimerEvent: {}
+[0.108119] (robotfield_description) JobProgress: {'identifier': 'robotfield_description', 'progress': 'build'}
+[0.111254] (robotfield_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/TEMP/CIT/build/robotfield_description', '--', '-j32', '-l32'], 'cwd': '/mnt/c/TEMP/CIT/build/robotfield_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GURUMDDS_HOME', '/usr/share/gurumdds/cmake/../../..'), ('USER', 'takita'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/opt/libphidget22/lib:/usr/share/gurumdds/cmake/../../../lib:/opt/ros/iron/opt/aws_sdk_cpp_vendor/lib:/opt/ros/iron/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/takita'), ('OLDPWD', '/home/takita'), ('CONNEXTDDS_DIR', '/opt/rti.com/rti_connext_dds-6.0.1'), ('ROS_PYTHON_VERSION', '3'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-6.0.1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/TEMP/CIT/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'takita'), ('NAME', 'blues'), ('WSL_INTEROP', '/run/WSL/207879_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('PATH', '/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microchip/xc8/v2.45/bin:/mnt/c/Program Files/dotnet/:/mnt/c/PROGRA~1/JPKI:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/blues/AppData/Local/Microsoft/WindowsApps:/snap/bin'), ('WT_SESSION', 'b586ec15-3d1d-4119-9cb3-87cfe436ff4c'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONNEXTDDS_ARCH', 'x64Linux4gcc7.3.0'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/mnt/c/TEMP/CIT/build/robotfield_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python/site-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.119486] (snake_robot_cit_description) JobProgress: {'identifier': 'snake_robot_cit_description', 'progress': 'cmake'}
+[0.135764] (snake_robot_cit_description) JobProgress: {'identifier': 'snake_robot_cit_description', 'progress': 'build'}
+[0.138734] (snake_robot_cit_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/TEMP/CIT/build/snake_robot_cit_description', '--', '-j32', '-l32'], 'cwd': '/mnt/c/TEMP/CIT/build/snake_robot_cit_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GURUMDDS_HOME', '/usr/share/gurumdds/cmake/../../..'), ('USER', 'takita'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/opt/libphidget22/lib:/usr/share/gurumdds/cmake/../../../lib:/opt/ros/iron/opt/aws_sdk_cpp_vendor/lib:/opt/ros/iron/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/takita'), ('OLDPWD', '/home/takita'), ('CONNEXTDDS_DIR', '/opt/rti.com/rti_connext_dds-6.0.1'), ('ROS_PYTHON_VERSION', '3'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-6.0.1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/TEMP/CIT/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'takita'), ('NAME', 'blues'), ('WSL_INTEROP', '/run/WSL/207879_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('PATH', '/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microchip/xc8/v2.45/bin:/mnt/c/Program Files/dotnet/:/mnt/c/PROGRA~1/JPKI:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/blues/AppData/Local/Microsoft/WindowsApps:/snap/bin'), ('WT_SESSION', 'b586ec15-3d1d-4119-9cb3-87cfe436ff4c'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONNEXTDDS_ARCH', 'x64Linux4gcc7.3.0'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/mnt/c/TEMP/CIT/build/snake_robot_cit_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python/site-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.199150] (-) TimerEvent: {}
+[0.221630] (snake_robot_cit_description) CommandEnded: {'returncode': 0}
+[0.232022] (robotfield_description) StdoutLine: {'line': b'-- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)\n'}
+[0.244198] (snake_robot_cit_description) JobProgress: {'identifier': 'snake_robot_cit_description', 'progress': 'install'}
+[0.251173] (snake_robot_cit_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/TEMP/CIT/build/snake_robot_cit_description'], 'cwd': '/mnt/c/TEMP/CIT/build/snake_robot_cit_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GURUMDDS_HOME', '/usr/share/gurumdds/cmake/../../..'), ('USER', 'takita'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/opt/libphidget22/lib:/usr/share/gurumdds/cmake/../../../lib:/opt/ros/iron/opt/aws_sdk_cpp_vendor/lib:/opt/ros/iron/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/takita'), ('OLDPWD', '/home/takita'), ('CONNEXTDDS_DIR', '/opt/rti.com/rti_connext_dds-6.0.1'), ('ROS_PYTHON_VERSION', '3'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-6.0.1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/TEMP/CIT/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'takita'), ('NAME', 'blues'), ('WSL_INTEROP', '/run/WSL/207879_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('PATH', '/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microchip/xc8/v2.45/bin:/mnt/c/Program Files/dotnet/:/mnt/c/PROGRA~1/JPKI:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/blues/AppData/Local/Microsoft/WindowsApps:/snap/bin'), ('WT_SESSION', 'b586ec15-3d1d-4119-9cb3-87cfe436ff4c'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONNEXTDDS_ARCH', 'x64Linux4gcc7.3.0'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/mnt/c/TEMP/CIT/build/snake_robot_cit_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python/site-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[0.265365] (snake_robot_cit_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.272073] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes\n'}
+[0.290060] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/base_link.stl\n'}
+[0.299242] (-) TimerEvent: {}
+[0.303544] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule1_1.stl\n'}
+[0.316311] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule2_1.stl\n'}
+[0.328288] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule3_1.stl\n'}
+[0.341382] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule4_1.stl\n'}
+[0.353909] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule5_1.stl\n'}
+[0.366604] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule6_1.stl\n'}
+[0.380127] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule7_1.stl\n'}
+[0.383877] (robotfield_description) StdoutLine: {'line': b'-- Found urdf: 2.8.2 (/opt/ros/iron/share/urdf/cmake)\n'}
+[0.393202] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule8_1.stl\n'}
+[0.399321] (-) TimerEvent: {}
+[0.404945] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule9_1.stl\n'}
+[0.418163] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1_1.stl\n'}
+[0.431895] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__1__1.stl\n'}
+[0.444892] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__2__1.stl\n'}
+[0.458077] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__3__1.stl\n'}
+[0.471161] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__4__1.stl\n'}
+[0.477191] (robotfield_description) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /opt/ros/iron/lib/x86_64-linux-gnu/cmake/tinyxml2\n'}
+[0.483233] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__5__1.stl\n'}
+[0.496265] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__6__1.stl\n'}
+[0.499410] (-) TimerEvent: {}
+[0.508905] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__7__1.stl\n'}
+[0.521038] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__8__1.stl\n'}
+[0.533024] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/tailmodule_1.stl\n'}
+[0.545141] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/tailmodule_v2_1.stl\n'}
+[0.555189] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf\n'}
+[0.572368] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf/materials.xacro\n'}
+[0.585219] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf/snake_robot_cit.trans\n'}
+[0.597971] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf/snake_robot_cit.xacro\n'}
+[0.599495] (-) TimerEvent: {}
+[0.607434] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/launch\n'}
+[0.624483] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/launch/robot_description.launch.py\n'}
+[0.646116] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/ament_index/resource_index/package_run_dependencies/snake_robot_cit_description\n'}
+[0.668122] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/ament_index/resource_index/parent_prefix_path/snake_robot_cit_description\n'}
+[0.679752] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/ament_prefix_path.sh\n'}
+[0.694770] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/ament_prefix_path.dsv\n'}
+[0.699592] (-) TimerEvent: {}
+[0.705740] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/path.sh\n'}
+[0.715257] (robotfield_description) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.720141] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/path.dsv\n'}
+[0.733796] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.bash\n'}
+[0.746507] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.sh\n'}
+[0.759578] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.zsh\n'}
+[0.772510] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.dsv\n'}
+[0.785332] (snake_robot_cit_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.dsv\n'}
+[0.799690] (-) TimerEvent: {}
+[0.837473] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/ament_index/resource_index/packages/snake_robot_cit_description\n'}
+[0.852283] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/cmake/snake_robot_cit_descriptionConfig.cmake\n'}
+[0.863781] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/cmake/snake_robot_cit_descriptionConfig-version.cmake\n'}
+[0.876417] (snake_robot_cit_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.xml\n'}
+[0.883158] (snake_robot_cit_description) CommandEnded: {'returncode': 0}
+[0.899811] (-) TimerEvent: {}
+[0.960143] (robotfield_description) StdoutLine: {'line': b'-- Generating done\n'}
+[0.999928] (-) TimerEvent: {}
+[1.001622] (robotfield_description) StdoutLine: {'line': b'-- Build files have been written to: /mnt/c/TEMP/CIT/build/robotfield_description\n'}
+[1.066898] (robotfield_description) CommandEnded: {'returncode': 0}
+[1.100031] (-) TimerEvent: {}
+[1.200401] (-) TimerEvent: {}
+[1.251195] (snake_robot_cit_description) JobEnded: {'identifier': 'snake_robot_cit_description', 'rc': 0}
+[1.257786] (robotfield_description) JobProgress: {'identifier': 'robotfield_description', 'progress': 'install'}
+[1.257994] (robotfield_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/TEMP/CIT/build/robotfield_description'], 'cwd': '/mnt/c/TEMP/CIT/build/robotfield_description', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('GURUMDDS_HOME', '/usr/share/gurumdds/cmake/../../..'), ('USER', 'takita'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/opt/libphidget22/lib:/usr/share/gurumdds/cmake/../../../lib:/opt/ros/iron/opt/aws_sdk_cpp_vendor/lib:/opt/ros/iron/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/takita'), ('OLDPWD', '/home/takita'), ('CONNEXTDDS_DIR', '/opt/rti.com/rti_connext_dds-6.0.1'), ('ROS_PYTHON_VERSION', '3'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-6.0.1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/TEMP/CIT/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'takita'), ('NAME', 'blues'), ('WSL_INTEROP', '/run/WSL/207879_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('PATH', '/opt/rti.com/rti_connext_dds-6.0.1/lib/x64Linux4gcc7.3.0:/opt/rti.com/rti_connext_dds-6.0.1/bin:/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Microchip/xc8/v2.45/bin:/mnt/c/Program Files/dotnet/:/mnt/c/PROGRA~1/JPKI:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/blues/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/blues/AppData/Local/Microsoft/WindowsApps:/snap/bin'), ('WT_SESSION', 'b586ec15-3d1d-4119-9cb3-87cfe436ff4c'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONNEXTDDS_ARCH', 'x64Linux4gcc7.3.0'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('PWD', '/mnt/c/TEMP/CIT/build/robotfield_description'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python/site-packages:/opt/ros/iron/lib/python3.10/site-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/TEMP/CIT/install/snake_robot_cit_description:/mnt/c/TEMP/CIT/install/robotfield_description:/opt/ros/iron'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:')]), 'shell': False}
+[1.263568] (robotfield_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.269348] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/meshes\n'}
+[1.285982] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/meshes/base_link.stl\n'}
+[1.300502] (-) TimerEvent: {}
+[1.400919] (-) TimerEvent: {}
+[1.501343] (-) TimerEvent: {}
+[1.601783] (-) TimerEvent: {}
+[1.702225] (-) TimerEvent: {}
+[1.802688] (-) TimerEvent: {}
+[1.903114] (-) TimerEvent: {}
+[2.003534] (-) TimerEvent: {}
+[2.103958] (-) TimerEvent: {}
+[2.204381] (-) TimerEvent: {}
+[2.304848] (-) TimerEvent: {}
+[2.405289] (-) TimerEvent: {}
+[2.505739] (-) TimerEvent: {}
+[2.606227] (-) TimerEvent: {}
+[2.706637] (-) TimerEvent: {}
+[2.807125] (-) TimerEvent: {}
+[2.907608] (-) TimerEvent: {}
+[3.008035] (-) TimerEvent: {}
+[3.108538] (-) TimerEvent: {}
+[3.208973] (-) TimerEvent: {}
+[3.309412] (-) TimerEvent: {}
+[3.409840] (-) TimerEvent: {}
+[3.510292] (-) TimerEvent: {}
+[3.610711] (-) TimerEvent: {}
+[3.711165] (-) TimerEvent: {}
+[3.811618] (-) TimerEvent: {}
+[3.912079] (-) TimerEvent: {}
+[4.012511] (-) TimerEvent: {}
+[4.112927] (-) TimerEvent: {}
+[4.213345] (-) TimerEvent: {}
+[4.313770] (-) TimerEvent: {}
+[4.414220] (-) TimerEvent: {}
+[4.514654] (-) TimerEvent: {}
+[4.615087] (-) TimerEvent: {}
+[4.715518] (-) TimerEvent: {}
+[4.815923] (-) TimerEvent: {}
+[4.916363] (-) TimerEvent: {}
+[5.016771] (-) TimerEvent: {}
+[5.117202] (-) TimerEvent: {}
+[5.217631] (-) TimerEvent: {}
+[5.318047] (-) TimerEvent: {}
+[5.418503] (-) TimerEvent: {}
+[5.518953] (-) TimerEvent: {}
+[5.619434] (-) TimerEvent: {}
+[5.719862] (-) TimerEvent: {}
+[5.820299] (-) TimerEvent: {}
+[5.920719] (-) TimerEvent: {}
+[6.021133] (-) TimerEvent: {}
+[6.121574] (-) TimerEvent: {}
+[6.222029] (-) TimerEvent: {}
+[6.322459] (-) TimerEvent: {}
+[6.422888] (-) TimerEvent: {}
+[6.523346] (-) TimerEvent: {}
+[6.623764] (-) TimerEvent: {}
+[6.724177] (-) TimerEvent: {}
+[6.824596] (-) TimerEvent: {}
+[6.925011] (-) TimerEvent: {}
+[7.025395] (-) TimerEvent: {}
+[7.125808] (-) TimerEvent: {}
+[7.226180] (-) TimerEvent: {}
+[7.326571] (-) TimerEvent: {}
+[7.426982] (-) TimerEvent: {}
+[7.527387] (-) TimerEvent: {}
+[7.627791] (-) TimerEvent: {}
+[7.728225] (-) TimerEvent: {}
+[7.828619] (-) TimerEvent: {}
+[7.929025] (-) TimerEvent: {}
+[8.029430] (-) TimerEvent: {}
+[8.129845] (-) TimerEvent: {}
+[8.230250] (-) TimerEvent: {}
+[8.330655] (-) TimerEvent: {}
+[8.431090] (-) TimerEvent: {}
+[8.531530] (-) TimerEvent: {}
+[8.631960] (-) TimerEvent: {}
+[8.732394] (-) TimerEvent: {}
+[8.832819] (-) TimerEvent: {}
+[8.933236] (-) TimerEvent: {}
+[9.033631] (-) TimerEvent: {}
+[9.134032] (-) TimerEvent: {}
+[9.234461] (-) TimerEvent: {}
+[9.334930] (-) TimerEvent: {}
+[9.435332] (-) TimerEvent: {}
+[9.535748] (-) TimerEvent: {}
+[9.636172] (-) TimerEvent: {}
+[9.736583] (-) TimerEvent: {}
+[9.836989] (-) TimerEvent: {}
+[9.937372] (-) TimerEvent: {}
+[10.037758] (-) TimerEvent: {}
+[10.138153] (-) TimerEvent: {}
+[10.238548] (-) TimerEvent: {}
+[10.338952] (-) TimerEvent: {}
+[10.439414] (-) TimerEvent: {}
+[10.539837] (-) TimerEvent: {}
+[10.640272] (-) TimerEvent: {}
+[10.740700] (-) TimerEvent: {}
+[10.841125] (-) TimerEvent: {}
+[10.941531] (-) TimerEvent: {}
+[11.041985] (-) TimerEvent: {}
+[11.142392] (-) TimerEvent: {}
+[11.242802] (-) TimerEvent: {}
+[11.343206] (-) TimerEvent: {}
+[11.443638] (-) TimerEvent: {}
+[11.544046] (-) TimerEvent: {}
+[11.644491] (-) TimerEvent: {}
+[11.744907] (-) TimerEvent: {}
+[11.845319] (-) TimerEvent: {}
+[11.945742] (-) TimerEvent: {}
+[12.046146] (-) TimerEvent: {}
+[12.146532] (-) TimerEvent: {}
+[12.246906] (-) TimerEvent: {}
+[12.347347] (-) TimerEvent: {}
+[12.447800] (-) TimerEvent: {}
+[12.548219] (-) TimerEvent: {}
+[12.648635] (-) TimerEvent: {}
+[12.749037] (-) TimerEvent: {}
+[12.849434] (-) TimerEvent: {}
+[12.949834] (-) TimerEvent: {}
+[13.050247] (-) TimerEvent: {}
+[13.150663] (-) TimerEvent: {}
+[13.251072] (-) TimerEvent: {}
+[13.351555] (-) TimerEvent: {}
+[13.452003] (-) TimerEvent: {}
+[13.552443] (-) TimerEvent: {}
+[13.652861] (-) TimerEvent: {}
+[13.753257] (-) TimerEvent: {}
+[13.853678] (-) TimerEvent: {}
+[13.954101] (-) TimerEvent: {}
+[14.054561] (-) TimerEvent: {}
+[14.154987] (-) TimerEvent: {}
+[14.255401] (-) TimerEvent: {}
+[14.355880] (-) TimerEvent: {}
+[14.456295] (-) TimerEvent: {}
+[14.556712] (-) TimerEvent: {}
+[14.657112] (-) TimerEvent: {}
+[14.757555] (-) TimerEvent: {}
+[14.858005] (-) TimerEvent: {}
+[14.958415] (-) TimerEvent: {}
+[15.058806] (-) TimerEvent: {}
+[15.159207] (-) TimerEvent: {}
+[15.259617] (-) TimerEvent: {}
+[15.360075] (-) TimerEvent: {}
+[15.460473] (-) TimerEvent: {}
+[15.560893] (-) TimerEvent: {}
+[15.661304] (-) TimerEvent: {}
+[15.761761] (-) TimerEvent: {}
+[15.862170] (-) TimerEvent: {}
+[15.962603] (-) TimerEvent: {}
+[16.062998] (-) TimerEvent: {}
+[16.163427] (-) TimerEvent: {}
+[16.263852] (-) TimerEvent: {}
+[16.364298] (-) TimerEvent: {}
+[16.464714] (-) TimerEvent: {}
+[16.565106] (-) TimerEvent: {}
+[16.665504] (-) TimerEvent: {}
+[16.765917] (-) TimerEvent: {}
+[16.866313] (-) TimerEvent: {}
+[16.966720] (-) TimerEvent: {}
+[17.067128] (-) TimerEvent: {}
+[17.167563] (-) TimerEvent: {}
+[17.267974] (-) TimerEvent: {}
+[17.368398] (-) TimerEvent: {}
+[17.387414] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf\n'}
+[17.402314] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/materials.xacro\n'}
+[17.444504] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/robotfield.trans\n'}
+[17.468488] (-) TimerEvent: {}
+[17.488487] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/robotfield.xacro\n'}
+[17.528173] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/launch\n'}
+[17.546038] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/launch/robot_description.launch.py\n'}
+[17.568590] (-) TimerEvent: {}
+[17.599535] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/package_run_dependencies/robotfield_description\n'}
+[17.619552] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/parent_prefix_path/robotfield_description\n'}
+[17.668686] (-) TimerEvent: {}
+[17.669348] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/ament_prefix_path.sh\n'}
+[17.682151] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/ament_prefix_path.dsv\n'}
+[17.691749] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/path.sh\n'}
+[17.705629] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/path.dsv\n'}
+[17.717587] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.bash\n'}
+[17.729730] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.sh\n'}
+[17.741268] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.zsh\n'}
+[17.752841] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.dsv\n'}
+[17.764033] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.dsv\n'}
+[17.768761] (-) TimerEvent: {}
+[17.808894] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/packages/robotfield_description\n'}
+[17.822454] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/cmake/robotfield_descriptionConfig.cmake\n'}
+[17.832893] (robotfield_description) StdoutLine: {'line': b'-- Up-to-date: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/cmake/robotfield_descriptionConfig-version.cmake\n'}
+[17.844753] (robotfield_description) StdoutLine: {'line': b'-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.xml\n'}
+[17.868845] (-) TimerEvent: {}
+[17.876882] (robotfield_description) CommandEnded: {'returncode': 0}
+[17.968944] (-) TimerEvent: {}
+[18.069285] (-) TimerEvent: {}
+[18.169631] (-) TimerEvent: {}
+[18.223255] (robotfield_description) JobEnded: {'identifier': 'robotfield_description', 'rc': 0}
+[18.228259] (-) EventReactorShutdown: {}

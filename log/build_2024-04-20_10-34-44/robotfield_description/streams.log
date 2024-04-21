@@ -1,0 +1,37 @@
+[0.037s] Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+[0.073s] -- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.186s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.326s] -- Found urdf: 2.8.2 (/opt/ros/iron/share/urdf/cmake)
+[0.436s] -- Found TinyXML2 via Config file: /opt/ros/iron/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.705s] -- Configuring done
+[0.896s] -- Generating done
+[0.938s] -- Build files have been written to: /mnt/c/TEMP/CIT/build/robotfield_description
+[0.960s] Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+[0.966s] Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/robotfield_description -- -j32 -l32
+[1.153s] Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/robotfield_description -- -j32 -l32
+[1.175s] Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/robotfield_description
+[1.180s] -- Install configuration: ""
+[1.185s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/meshes
+[1.204s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/meshes/base_link.stl
+[17.675s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf
+[17.692s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/materials.xacro
+[17.738s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/robotfield.trans
+[17.782s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/robotfield.xacro
+[17.825s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/launch
+[17.841s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/launch/robot_description.launch.py
+[17.903s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/package_run_dependencies/robotfield_description
+[17.968s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/parent_prefix_path/robotfield_description
+[18.020s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/ament_prefix_path.sh
+[18.055s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/ament_prefix_path.dsv
+[18.093s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/path.sh
+[18.130s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/path.dsv
+[18.168s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.bash
+[18.203s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.sh
+[18.238s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.zsh
+[18.274s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.dsv
+[18.311s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.dsv
+[18.364s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/packages/robotfield_description
+[18.420s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/cmake/robotfield_descriptionConfig.cmake
+[18.457s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/cmake/robotfield_descriptionConfig-version.cmake
+[18.496s] -- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.xml
+[18.526s] Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/robotfield_description

@@ -1,0 +1,2 @@
+Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '1': /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description

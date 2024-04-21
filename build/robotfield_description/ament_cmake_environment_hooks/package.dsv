@@ -1,0 +1,4 @@
+source;share/robotfield_description/local_setup.bash
+source;share/robotfield_description/local_setup.dsv
+source;share/robotfield_description/local_setup.sh
+source;share/robotfield_description/local_setup.zsh

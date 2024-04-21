@@ -1,0 +1,9 @@
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/uninstall.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/robotfield_description_uninstall.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/test.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/edit_cache.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/rebuild_cache.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/list_install_components.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/install.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/install/local.dir
+/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/install/strip.dir

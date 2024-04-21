@@ -1,0 +1,33 @@
+[0.026s] Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+[0.249s] -- The C compiler identification is GNU 11.4.0
+[0.636s] -- The CXX compiler identification is GNU 11.4.0
+[0.866s] -- Detecting C compiler ABI info
+[1.223s] -- Detecting C compiler ABI info - done
+[1.239s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.239s] -- Detecting C compile features
+[1.240s] -- Detecting C compile features - done
+[1.272s] -- Detecting CXX compiler ABI info
+[1.611s] -- Detecting CXX compiler ABI info - done
+[1.626s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.626s] -- Detecting CXX compile features
+[1.628s] -- Detecting CXX compile features - done
+[2.293s] [31mCMake Error at CMakeLists.txt:18 (find_package):
+[2.294s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[2.294s]   has asked CMake to find a package configuration file provided by
+[2.295s]   "ament_cmake", but CMake did not find one.
+[2.295s] 
+[2.296s]   Could not find a package configuration file provided by "ament_cmake" with
+[2.296s]   any of the following names:
+[2.297s] 
+[2.297s]     ament_cmakeConfig.cmake
+[2.298s]     ament_cmake-config.cmake
+[2.298s] 
+[2.299s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[2.299s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[2.300s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[2.300s]   has been installed.
+[2.300s] 
+[2.301s] [0m
+[2.301s] -- Configuring incomplete, errors occurred!
+[2.302s] See also "/mnt/c/TEMP/CIT/build/robotfield_description/CMakeFiles/CMakeOutput.log".
+[2.303s] Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '1': /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description

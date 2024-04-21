@@ -1,0 +1,31 @@
+-- Found ament_cmake: 2.0.4 (/opt/ros/iron/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Found urdf: 2.8.2 (/opt/ros/iron/share/urdf/cmake)
+-- Found TinyXML2 via Config file: /opt/ros/iron/lib/x86_64-linux-gnu/cmake/tinyxml2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/c/TEMP/CIT/build/robotfield_description
+-- Install configuration: ""
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/meshes
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/meshes/base_link.stl
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/materials.xacro
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/robotfield.trans
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/urdf/robotfield.xacro
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/launch
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/launch/robot_description.launch.py
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/package_run_dependencies/robotfield_description
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/parent_prefix_path/robotfield_description
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/ament_prefix_path.sh
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/ament_prefix_path.dsv
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/path.sh
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/environment/path.dsv
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.bash
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.sh
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.zsh
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/local_setup.dsv
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.dsv
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/ament_index/resource_index/packages/robotfield_description
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/cmake/robotfield_descriptionConfig.cmake
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/cmake/robotfield_descriptionConfig-version.cmake
+-- Installing: /mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.xml

@@ -1,0 +1,6 @@
+Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/robotfield_description -- -j32 -l32
+Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/robotfield_description -- -j32 -l32
+Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/robotfield_description
+Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/robotfield_description

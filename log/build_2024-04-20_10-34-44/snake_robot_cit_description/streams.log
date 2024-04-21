@@ -1,0 +1,48 @@
+[0.044s] Invoking command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/snake_robot_cit_description -- -j32 -l32
+[0.101s] Invoked command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/snake_robot_cit_description -- -j32 -l32
+[0.131s] Invoking command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/snake_robot_cit_description
+[0.137s] -- Install configuration: ""
+[0.142s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes
+[0.159s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/base_link.stl
+[0.171s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule1_1.stl
+[0.184s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule2_1.stl
+[0.198s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule3_1.stl
+[0.211s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule4_1.stl
+[0.223s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule5_1.stl
+[0.235s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule6_1.stl
+[0.248s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule7_1.stl
+[0.262s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule8_1.stl
+[0.274s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule9_1.stl
+[0.286s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1_1.stl
+[0.300s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__1__1.stl
+[0.313s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__2__1.stl
+[0.324s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__3__1.stl
+[0.337s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__4__1.stl
+[0.350s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__5__1.stl
+[0.363s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__6__1.stl
+[0.376s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__7__1.stl
+[0.389s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/onemodule_v1__8__1.stl
+[0.402s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/tailmodule_1.stl
+[0.415s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/meshes/tailmodule_v2_1.stl
+[0.424s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf
+[0.441s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf/materials.xacro
+[0.453s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf/snake_robot_cit.trans
+[0.467s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/urdf/snake_robot_cit.xacro
+[0.477s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/launch
+[0.494s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/launch/robot_description.launch.py
+[0.515s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/ament_index/resource_index/package_run_dependencies/snake_robot_cit_description
+[0.536s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/ament_index/resource_index/parent_prefix_path/snake_robot_cit_description
+[0.548s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/ament_prefix_path.sh
+[0.563s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/ament_prefix_path.dsv
+[0.574s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/path.sh
+[0.589s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/environment/path.dsv
+[0.603s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.bash
+[0.616s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.sh
+[0.630s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.zsh
+[0.644s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/local_setup.dsv
+[0.658s] -- Installing: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.dsv
+[0.710s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/ament_index/resource_index/packages/snake_robot_cit_description
+[0.725s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/cmake/snake_robot_cit_descriptionConfig.cmake
+[0.737s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/cmake/snake_robot_cit_descriptionConfig-version.cmake
+[0.750s] -- Up-to-date: /mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.xml
+[0.757s] Invoked command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/snake_robot_cit_description

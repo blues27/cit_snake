@@ -1,0 +1,164 @@
+[0.128s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.129s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f69a0f9d060>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f69a110ceb0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f69a110ceb0>>)
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.264s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.265s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/mnt/c/TEMP/CIT'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(robotfield_description) by extension 'ros'
+[0.299s] DEBUG:colcon.colcon_core.package_identification:Package 'robotfield_description' with type 'ros.ament_cmake' and name 'robotfield_description'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extensions ['ignore', 'ignore_ament_install']
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(snake_robot_cit_description) by extension 'ros'
+[0.310s] DEBUG:colcon.colcon_core.package_identification:Package 'snake_robot_cit_description' with type 'ros.ament_cmake' and name 'snake_robot_cit_description'
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.310s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.327s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'cmake_args' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'cmake_target' from command line to 'None'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.328s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'robotfield_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.329s] DEBUG:colcon.colcon_core.verb:Building package 'robotfield_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/TEMP/CIT/build/robotfield_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/TEMP/CIT/install/robotfield_description', 'merge_install': False, 'path': '/mnt/c/TEMP/CIT/robotfield_description', 'symlink_install': False, 'test_result_base': None}
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'cmake_args' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'cmake_target' from command line to 'None'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.329s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.330s] Level 5:colcon.colcon_core.verb:set package 'snake_robot_cit_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.330s] DEBUG:colcon.colcon_core.verb:Building package 'snake_robot_cit_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/TEMP/CIT/build/snake_robot_cit_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/TEMP/CIT/install/snake_robot_cit_description', 'merge_install': False, 'path': '/mnt/c/TEMP/CIT/snake_robot_cit_description', 'symlink_install': False, 'test_result_base': None}
+[0.330s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.331s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.331s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/TEMP/CIT/robotfield_description' with build type 'ament_cmake'
+[0.331s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/TEMP/CIT/robotfield_description'
+[0.334s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.334s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.334s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.338s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/TEMP/CIT/snake_robot_cit_description' with build type 'ament_cmake'
+[0.339s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/TEMP/CIT/snake_robot_cit_description'
+[0.339s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.339s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.358s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/TEMP/CIT/build/robotfield_description': /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+[0.383s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description': /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/snake_robot_cit_description -- -j32 -l32
+[0.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description' returned '0': /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/snake_robot_cit_description -- -j32 -l32
+[0.491s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description': /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/snake_robot_cit_description
+[1.114s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(snake_robot_cit_description)
+[1.115s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description' returned '0': /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/snake_robot_cit_description
+[1.117s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description' for CMake module files
+[1.176s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description' for CMake config files
+[1.214s] Level 1:colcon.colcon_core.shell:create_environment_hook('snake_robot_cit_description', 'cmake_prefix_path')
+[1.215s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/hook/cmake_prefix_path.ps1'
+[1.225s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/hook/cmake_prefix_path.dsv'
+[1.235s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/hook/cmake_prefix_path.sh'
+[1.248s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/bin'
+[1.249s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/lib/pkgconfig/snake_robot_cit_description.pc'
+[1.252s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/lib/python3.10/site-packages'
+[1.253s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/bin'
+[1.254s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.ps1'
+[1.263s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.dsv'
+[1.271s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.sh'
+[1.280s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.bash'
+[1.288s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.zsh'
+[1.296s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/colcon-core/packages/snake_robot_cit_description)
+[1.324s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(snake_robot_cit_description)
+[1.324s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description' for CMake module files
+[1.382s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description' for CMake config files
+[1.420s] Level 1:colcon.colcon_core.shell:create_environment_hook('snake_robot_cit_description', 'cmake_prefix_path')
+[1.421s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/hook/cmake_prefix_path.ps1'
+[1.430s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/hook/cmake_prefix_path.dsv'
+[1.440s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/hook/cmake_prefix_path.sh'
+[1.452s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/bin'
+[1.453s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/lib/pkgconfig/snake_robot_cit_description.pc'
+[1.454s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/lib/python3.10/site-packages'
+[1.455s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/bin'
+[1.456s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.ps1'
+[1.464s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.dsv'
+[1.473s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.sh'
+[1.481s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.bash'
+[1.489s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/snake_robot_cit_description/package.zsh'
+[1.497s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/TEMP/CIT/install/snake_robot_cit_description/share/colcon-core/packages/snake_robot_cit_description)
+[2.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/TEMP/CIT/build/robotfield_description' returned '1': /usr/bin/cmake /mnt/c/TEMP/CIT/robotfield_description -DCMAKE_INSTALL_PREFIX=/mnt/c/TEMP/CIT/install/robotfield_description
+[2.651s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robotfield_description)
+[2.651s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/robotfield_description' for CMake module files
+[2.660s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/robotfield_description' for CMake config files
+[2.661s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/robotfield_description/bin'
+[2.661s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/robotfield_description/lib/pkgconfig/robotfield_description.pc'
+[2.662s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/robotfield_description/lib/python3.10/site-packages'
+[2.662s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/TEMP/CIT/install/robotfield_description/bin'
+[2.663s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.ps1'
+[2.671s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.dsv'
+[2.679s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.sh'
+[2.686s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.bash'
+[2.694s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/TEMP/CIT/install/robotfield_description/share/robotfield_description/package.zsh'
+[2.702s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/TEMP/CIT/install/robotfield_description/share/colcon-core/packages/robotfield_description)
+[2.720s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.720s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.721s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[2.721s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.748s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.749s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.749s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.749s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.749s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[2.749s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.750s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/TEMP/CIT/install/local_setup.ps1'
+[2.754s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/TEMP/CIT/install/_local_setup_util_ps1.py'
+[2.758s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/TEMP/CIT/install/setup.ps1'
+[2.761s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/TEMP/CIT/install/local_setup.sh'
+[2.765s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/TEMP/CIT/install/_local_setup_util_sh.py'
+[2.769s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/TEMP/CIT/install/setup.sh'
+[2.772s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/TEMP/CIT/install/local_setup.bash'
+[2.776s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/TEMP/CIT/install/setup.bash'
+[2.779s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/TEMP/CIT/install/local_setup.zsh'
+[2.783s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/TEMP/CIT/install/setup.zsh'

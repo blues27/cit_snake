@@ -1,0 +1,4 @@
+Invoking command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description': /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/snake_robot_cit_description -- -j32 -l32
+Invoked command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description' returned '0': /usr/bin/cmake --build /mnt/c/TEMP/CIT/build/snake_robot_cit_description -- -j32 -l32
+Invoking command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description': /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/snake_robot_cit_description
+Invoked command in '/mnt/c/TEMP/CIT/build/snake_robot_cit_description' returned '0': /usr/bin/cmake --install /mnt/c/TEMP/CIT/build/snake_robot_cit_description
