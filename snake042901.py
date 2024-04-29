@@ -1,8 +1,7 @@
 import pybullet as p
+import pybullet_data
 import time
 import math
-
-import pybullet_data
 
 import random 
 
@@ -15,27 +14,39 @@ from deap import tools
 
 # optimize: A, w, phi
 # angle(n,t) = A * sin(w t + n * phi) 
-    
+'''    
 creator.create("FitnessMin", base.Fitness, weights=(-1.0,))
-
 creator.create("Individual", list, fitness = creator.FitnessMin)
 '''
+creator.create("FitnessMax", base.Fitness, weights=(1.0,))
+creator.create("Individual", list, fitness = creator.FitnessMax)
+
 IND_SIZE = 10
 
 toolbox = base.Toolbox()
-toolbox.register("attribute",
+
+toolbox.register("attr_float",
                  random.random)
+
 toolbox.register("individual",
                  tools.initRepeat,
                  creator.Individual,
-                 toolbox.attribute,
+                 toolbox.attr_float,
                  n=IND_SIZE)
+
 toolbox.register("population",
                  tools.initRepeat,
                  list,
                  toolbox.individual)
-'''
 
+#toolbox.register("evaluate", ackley)  // traveled distance 
+
+toolbox.register("mate", tools.cxBlend, alpha=0.2)
+
+toolbox.register("mutate", tools.mutGaussian,
+                 mu=[0.0, 0.0], sigma=[200.0, 200.0], indpb=0.2)
+
+toolbox.register("select", tools.selTournament, tournsize=3)
 
 gridwidth = 0.18 
 cylinderRadius = 0.02
@@ -136,20 +147,39 @@ def make_environment():
    
 def load_robot():
     
-    robotId = p.loadURDF("multisections.urdf", basePosition=[0, 0, 3.0],  useMaximalCoordinates = 0 )
+    robot_id = p.loadURDF("multisections.urdf", basePosition=[0, 0, 3.0],  useMaximalCoordinates = 0 )
 
-    print(p.getBasePositionAndOrientation(robotId))
-    p.resetBasePositionAndOrientation(robotId,[ gridwidth * 0.5, 0.0, 0.0],[0.0, 0.0, 0.0, 1.0])
-    print(p.getBasePositionAndOrientation(robotId))
+    print(p.getBasePositionAndOrientation(robot_id))
+    p.resetBasePositionAndOrientation(robot_id,[ gridwidth * 0.5, 0.0, 0.0],[0.0, 0.0, 0.0, 1.0])
+    print(p.getBasePositionAndOrientation(robot_id))
     anistropicFriction = [1, 0.01, 0.01]
-    p.changeDynamics(robotId, -1, lateralFriction=2, anisotropicFriction=anistropicFriction)
+    p.changeDynamics(robot_id, -1, lateralFriction=2, anisotropicFriction=anistropicFriction)
     
-    for i in range( p.getNumJoints(robotId) ):
-        print(p.getJointInfo(robotId, i))
-        p.changeDynamics(robotId, i, lateralFriction=2, anisotropicFriction=anistropicFriction)
+    for i in range( p.getNumJoints(robot_id) ):
+        print(p.getJointInfo(robot_id, i))
+        p.changeDynamics(robot_id, i, lateralFriction=2, anisotropicFriction=anistropicFriction)
 
-    return robotId
+    return robot_id
 
+def reset_robot(robot_id):
+    p.resetBasePositionAndOrientation(robot_id,[ gridwidth * 0.5, 0.0, 10.0],[0.0, 0.0, 0.0, 1.0])
+
+    p.resetBasePositionAndOrientation(robot_id,[ gridwidth * 0.5, 0.0, 0.2],[0.0, 0.0, 0.0, 1.0])    
+
+    anistropicFriction = [1, 0.01, 0.01]
+    for i in range( p.getNumJoints(robot_id) ):
+        print(p.getJointInfo(robot_id, i))
+        p.changeDynamics(robot_id, i, lateralFriction=2, anisotropicFriction=anistropicFriction)
+
+        p.setJointMotorControl2(robot_id,
+                                i,
+                                p.POSITION_CONTROL,
+                                targetPosition=0,
+                                force=300)
+        
+
+    return robot_id
+        
 physicsClient = p.connect(p.GUI)#or p.DIRECT for non-graphical version
 p.setAdditionalSearchPath(pybullet_data.getDataPath()) #optionally
 p.setGravity(0,0, -10)
@@ -161,6 +191,7 @@ planeId = p.loadURDF("plane.urdf")
 robotId = load_robot()
 
 print()
+
 
 #                  1   2   3   4   5   6   7   8   9  10  11  12
 section_joints = [ 0,  1,  2,  3,  4,  5,  6,  7,  8, 9 ]
@@ -190,6 +221,10 @@ while True:
     keys = p.getKeyboardEvents()
     for k, v in keys.items():
 
+        if (k == p.B3G_UP_ARROW and (v & p.KEY_WAS_TRIGGERED)):
+            reset_robot(robotId)
+                
+
         if (k == p.B3G_RIGHT_ARROW and (v & p.KEY_WAS_TRIGGERED)):
             m_steering = m_steering - 0.01
             if m_steering < m_offsetMin: 
@@ -213,12 +248,13 @@ while True:
     base_pos,base_ori = p.getBasePositionAndOrientation(robotId)        
     #print(base_pos)
     
-
+    
     jointx = []
     jointy = []
 
     jointx.clear()
     jointy.clear()
+
     for i in range(len(section_joints)) :
         joint = section_joints[i] 
         m_velocity = 0.8
@@ -226,10 +262,15 @@ while True:
 
         phase =  m_waveAmplitude * math.sin( m_waveFreq * t - ((i -4)  *  m_phaseOffset )) - m_steering 
         
-        link_state =  p.getLinkState(robotId,i)
-        jointx.append(link_state[0][0])
-        jointy.append(link_state[0][1])
+        #link_state =  p.getLinkState(robotId,i)
+        #jointx.append(link_state[0][0])
+        #jointy.append(link_state[0][1]) 
+
+        link_state =  p.getLinkState(robotId,joint)
         
+        jointx.append(link_state[0][1])
+        jointy.append(link_state[0][0])
+       
         if i >= 1 : 
             d_linkstart =  p.getLinkState(robotId,i-1)
             d_linkstop  =  p.getLinkState(robotId,i)
@@ -252,14 +293,22 @@ while True:
                                 force=300)
 
     #print()
-    #print(jointx)
     #print(jointy)
+
     x = np.array(jointx)
     y = np.array(jointy)    
-    k = np.polyfit(x, y , 1)
-    print(k)
+
+    a = ((x * y).mean() - (x.mean() * y.mean())) / ((x ** 2).mean() - x.mean() ** 2)
+    b = -(a * x.mean()) + y.mean()    
+
+    #a,b = np.linalg.solve(x,y)
+
+    k = np.polyfit(jointx, jointy , 1)
+
+    #print( str(k) + " : " + str(a) + " , " + str(b) )
+    #print(str(jointx) + " , " + str(jointy) + " , " + str(k) )
     
-    p.addUserDebugLine([0, k[0] * 0 + k[1], 0.2], [1, k[0] * 1 + k[1], 0.2], [1, 0, 0],lifeTime = 0.5 )    
+    p.addUserDebugLine([ k[0] * jointx[0] + k[1], jointx[0], 0.2], [ k[0] * jointx[9] + k[1], jointx[9],0.2], [1, 0, 0],lifeTime = 0.5 )    
     
     p.stepSimulation()
     t += dt
