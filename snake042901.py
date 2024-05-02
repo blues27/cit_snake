@@ -47,7 +47,7 @@ class RobotSim:
     init_ori = []
     end_pos = []
     end_ori = []
-    
+
     def make_environment(self):
         colBoxId = p.createCollisionShape(p.GEOM_BOX, halfExtents = [self.boxHalfLength, self.boxHalfWidth, self.boxHalfHeight])
         
@@ -171,6 +171,12 @@ class RobotSim:
                               targetVelocity=0)
         
         p.resetBasePositionAndOrientation(robot_id,[ self.gridwidth * 0.5, 0.0, 0.1],[0.0, 0.0, 0.0, 1.0])    
+
+    def printparam(self):
+        print("m_waveAmplitude = %f"% self.m_waveAmplitude)
+        print("m_waveFreq = %f"% self.m_waveFreq)
+        print("m_phaseOffset = %f"% self.m_phaseOffset)
+        print("m_steering = %f"% self.m_steering)    
         
     def __init__(self):
         physicsClient = p.connect(p.GUI)#or p.DIRECT for non-graphical version
@@ -181,6 +187,7 @@ class RobotSim:
         planeId = p.loadURDF("plane.urdf")
         #self.make_environment()
 
+        self.printparam()        
         self.robotId = self.load_robot()
 
     def one_trial(self):
@@ -316,13 +323,24 @@ def calc_eval(individual):
     robotsim.m_waveFreq = individual[1]
     robotsim.m_phaseOffset = individual[2]
     robotsim.m_steering = individual[3]
-    
+
+    robotsim.printparam()            
     robotsim.one_trial()
     dist = calc_dist(robotsim.init_pos,robotsim.end_pos)
         
     return dist,
 
-def calc_mutation(individual, indpb):
+
+def calc_parameters(container):
+    params = []
+
+    params[0] = math.pi * 2.0 * ( random.uniform(0.0, 360.0) / 360.0 ) # m_waveAmplitude
+
+    
+    
+    
+#def calc_mutation(individual, indpb):
+    
     
 # optimize: A, w, phi
 # angle(n,t) = A * sin(w t + n * phi) 
