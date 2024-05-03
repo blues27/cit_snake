@@ -9,7 +9,7 @@ class RobotSim:
 
     #constant value
 
-    robot_sim_period = 1
+    robot_sim_period = 10
     
     gridwidth = 0.18 
     cylinderRadius = 0.02
@@ -330,16 +330,39 @@ def calc_eval(individual):
         
     return dist,
 
-
+def calc_parameter(num):
+    ret_val = 0.0
+    #print("num:", num) 
+    if num == 0:
+        ret_val = math.pi * 2.0 * ( random.uniform(0.0, 360.0) / 360.0 )  # m_waveAmplitude
+    elif num == 1:
+        ret_val = math.pi * 2.0 / ( random.uniform(0.0, 10.0) + 0.001 )  # m_waveFreq
+    elif num == 2: 
+        ret_val = math.pi * 2.0 / ( robotsim.m_segmentNumber / random.uniform(1.0, 5.0))
+    elif num == 3:
+        ret_val = random.uniform(robotsim.m_offsetMin, robotsim.m_offsetMax)
+    else :
+        ret_val = 0.0
+    #print("ret_val:", ret_val)        
+    return ret_val 
+        
 def calc_parameters(container):
     params = []
 
-    params[0] = math.pi * 2.0 * ( random.uniform(0.0, 360.0) / 360.0 ) # m_waveAmplitude
+    params.append(calc_parameter(0))
+    params.append(calc_parameter(1))
+    params.append(calc_parameter(2))
+    params.append(calc_parameter(3))
+    
+    return container(params)
 
     
-    
-    
-#def calc_mutation(individual, indpb):
+def calc_mutation(individual, indpb):
+    for i in range(len(individual)):
+        if random.random() < indpb :
+            individual[i] = calc_parameter(i)
+    return individual, 
+        
     
     
 # optimize: A, w, phi
@@ -359,10 +382,8 @@ toolbox.register("attr_float",
                  random.random)
 
 toolbox.register("individual",
-                 tools.initRepeat,
-                 creator.Individual,
-                 toolbox.attr_float,
-                 n=IND_SIZE)
+                 calc_parameters,
+                 creator.Individual)
 
 toolbox.register("population",
                  tools.initRepeat,
@@ -370,12 +391,8 @@ toolbox.register("population",
                  toolbox.individual)
 
 toolbox.register("evaluate", calc_eval)  # traveled distance 
-
 toolbox.register("mate", tools.cxBlend, alpha=0.2)
-
-toolbox.register("mutate", tools.mutGaussian,
-                 mu=[0.0, 0.0], sigma=[200.0, 200.0], indpb=0.2)
-
+toolbox.register("mutate", calc_mutation, indpb=0.2)
 toolbox.register("select", tools.selTournament, tournsize=3)
 
 random.seed(1)
