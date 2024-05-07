@@ -85,7 +85,8 @@ class RobotSim:
 
     rewardtable = [] 
 
-    gridtable = [] 
+    gridtable = []
+    
     
     #def calc_array_index(self, col, row):
     #return 
@@ -205,7 +206,8 @@ class RobotSim:
         for grid in self.gridtable:
             print( "[(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
         print(len(self.gridtable))
-                
+
+        
     def load_robot(self):
     
         robot_id = p.loadURDF("multisections.urdf", basePosition=[0, 0, 3.0],  useMaximalCoordinates = 0 )
@@ -416,13 +418,13 @@ def calc_eval(individual):
 def calc_parameter(num):
     ret_val = 0.0
     #print("num:", num) 
-    if num == 0:
+    if num%4 == 0:
         ret_val = math.pi * 2.0 * ( random.uniform(0.0, 360.0) / 360.0 )  # m_waveAmplitude
-    elif num == 1:
+    elif num%4 == 1:
         ret_val = math.pi * 2.0 / ( random.uniform(1.0, 10.0) )  # m_waveFreq
-    elif num == 2: 
+    elif num%4 == 2: 
         ret_val = math.pi * 2.0 / ( robotsim.m_segmentNumber / random.uniform(1.0, 5.0))
-    elif num == 3:
+    elif num%4 == 3:
         ret_val = random.uniform(robotsim.m_offsetMin, robotsim.m_offsetMax)
     else :
         ret_val = 0.0
@@ -431,13 +433,18 @@ def calc_parameter(num):
         
 def calc_parameters(container):
     params = []
-    if random.random() < 0.25 :
-        params = lastbestgene
-    else:
-        params.append(calc_parameter(0))
-        params.append(calc_parameter(1))
-        params.append(calc_parameter(2))
-        params.append(calc_parameter(3))
+
+    for i in range(len(robotsim.gridtable)):
+        if random.random() < 0.25 :
+            params.append(lastbestgene[0])
+            params.append(lastbestgene[1])
+            params.append(lastbestgene[2])
+            params.append(lastbestgene[3])            
+        else:
+            params.append(calc_parameter(0))
+            params.append(calc_parameter(1))
+            params.append(calc_parameter(2))
+            params.append(calc_parameter(3))
     
     return container(params)
 
