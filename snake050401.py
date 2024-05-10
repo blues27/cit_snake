@@ -38,7 +38,6 @@ class GridClass:
             
         if (pos[0] > minx) and (pos[0] < maxx) and (pos[1] > miny) and (pos[1] < maxy):
             ret = 1
-            self.visited = 1 
             
         return ret
             
@@ -92,9 +91,13 @@ class RobotSim:
     newListH = []
     newListV = []
 
+    visitedgrid = 0 
+    
     rewardtable = [] 
 
     gridtable = []
+
+    traveled  = 0.0 
     
     #def calc_array_index(self, col, row):
     #return 
@@ -143,8 +146,8 @@ class RobotSim:
         self.newListV  = newListV
         self.newListH  = newListH
         
-        print(self.newListV)
-        print(self.newListH)
+        #print(self.newListV)
+        #print(self.newListH)
         
         for i in newListH :
             sphereUid = p.createMultiBody(mass,
@@ -214,11 +217,11 @@ class RobotSim:
                 point4 = GridClass(self.gridwidth * -(i) , self.gridwidth * -(j), self.gridwidth * -(i + 1) , self.gridwidth *  -(j + 1))
                 point4.indexnum = len( self.gridtable)
                 self.gridtable.append(point4)
-
+        '''
         for grid in self.gridtable:
             print( "[" + str(grid.indexnum) +":(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
         print(len(self.gridtable))
-
+        '''
         
     def load_robot(self):
     
@@ -256,10 +259,17 @@ class RobotSim:
         p.resetBasePositionAndOrientation(robot_id,[ self.gridwidth * 0.5, 0.0, 0.1],[0.0, 0.0, 0.0, 1.0])    
 
     def printparam(self):
+        print("print status")
         print("m_waveAmplitude : ", self.m_waveAmplitude)
         print("m_waveFreq : ", self.m_waveFreq)
         print("m_phaseOffset : ", self.m_phaseOffset)
         print("m_steering : ", self.m_steering)    
+
+    def clearparam(self):
+        self.m_waveAmplitude.clear()
+        self.m_waveFreq.clear()
+        self.m_phaseOffset.clear()
+        self.m_steering.clear()    
         
     def __init__(self):
         physicsClient = p.connect(p.GUI)#or p.DIRECT for non-graphical version
@@ -270,7 +280,7 @@ class RobotSim:
         planeId = p.loadURDF("plane.urdf")
         self.make_environment()
 
-        self.printparam()        
+        #self.printparam()        
         self.robotId = self.load_robot()
 
     def one_trial(self):
@@ -287,21 +297,42 @@ class RobotSim:
 
         #print("2:")
         #print(p.getBasePositionAndOrientation(self.robotId))
+
+        self.visitedgrid = 0 
+        self.traveled = 0.0
+        
+        for grid in self.gridtable:
+            grid.visited = 0
         
         self.init_pos,self.init_ori = p.getBasePositionAndOrientation(self.robotId)
         
         print("start: " + str(self.init_pos))
+        pre_pos = self.init_pos
+        pre_ori = self.init_ori
 
         while self.t_sim < self.robot_sim_period : #True:
+            #print("\rT = "+str(self.t_sim), end="")
+                  
             pos,ori = p.getBasePositionAndOrientation(self.robotId)
             gridindex = 0
             
             for grid in self.gridtable:
                 if grid.is_withingrid(pos) == 1:
-                    print( pos )
-                    print( "[" + str(grid.indexnum) +":(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
-                    gridindex = grid.indexnum
                     
+                    gridindex = grid.indexnum
+                    if grid.visited == 0 : 
+                        print( "visited cell:[" + str(grid.indexnum) +":(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
+                        #print("visited pos ", pos )
+                        pos_p = np.array(pre_pos)
+                        pos_q = np.array(pos)
+                        self.traveled = self.traveled + np.linalg.norm(pos_q-pos_p)
+                    grid.visited = 1
+
+
+            pre_pos = pos
+            pre_ori = ori
+            
+            
             jointx = []
             jointy = []
 
@@ -351,16 +382,18 @@ class RobotSim:
 
             p.stepSimulation()
             self.t_sim += self.dt_sim
-            pos,ori = p.getBasePositionAndOrientation(self.robotId)
-            #for grid in self.gridtable:
-                
-            
             if pos[2] > 0.1 :
                 print( "pos[2] = ",pos[2])
                 self.t_sim = self.robot_sim_period
                 
         self.end_pos,self.end_ori = p.getBasePositionAndOrientation(self.robotId)
         print("end : " + str(self.end_pos))
+        
+        for grid in self.gridtable:
+            self.visitedgrid = self.visitedgrid + grid.visited
+
+        print("totalvisit : " + str(self.visitedgrid))
+        
         
     def end_sim(self):
         p.disconnect()
@@ -399,19 +432,27 @@ def calc_dist(a1,b1):
 
 def calc_eval(individual):
     # phase =  self.m_waveAmplitude * math.sin( self.m_waveFreq * self.t_sim - ((i -4)  *  self.m_phaseOffset )) - self.m_steering 
+
+    robotsim.clearparam()
+    
+    #robotsim.printparam()
+    
     for i in range(len(robotsim.gridtable)):
-        robotsim.m_waveAmplitude[i] = individual[i*4+0]
-        robotsim.m_waveFreq[i] = individual[i*4+1]
-        robotsim.m_phaseOffset[i] = individual[i*4+2]
-        robotsim.m_steering[i] = individual[i*4+3]
+        #print("i=",i)
+        robotsim.m_waveAmplitude.append( individual[ i * 4 + 0 ] )
+        robotsim.m_waveFreq.append( individual[ i * 4 + 1 ] )
+        robotsim.m_phaseOffset.append( individual[ i * 4 + 2] )
+        robotsim.m_steering.append(individual[ i * 4 + 3 ] )
 
     robotsim.printparam()            
     robotsim.one_trial()
+    
+    #dist = calc_dist(robotsim.init_pos,robotsim.end_pos)
+    dist = robotsim.traveled
 
-    dist = calc_dist(robotsim.init_pos,robotsim.end_pos)
     if robotsim.end_pos [2] > 0.1 :
         dist = 0.0 
-
+        
     print("distance = " + str(dist))        
     return dist,
 
