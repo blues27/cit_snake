@@ -10,7 +10,10 @@ class GridClass:
     pointy1 = 0.0
     pointx2 = 0.0
     pointy2 = 0.0
+    indexnum = 0
 
+    visited = 0 
+    
     def __init__(self,x1,y1,x2,y2):
         self.pointx1 = x1
         self.pointy1 = y1
@@ -35,6 +38,7 @@ class GridClass:
             
         if (pos[0] > minx) and (pos[0] < maxx) and (pos[1] > miny) and (pos[1] < maxy):
             ret = 1
+            self.visited = 1 
             
         return ret
             
@@ -65,17 +69,22 @@ class RobotSim:
     
     m_waveLength = m_segmentLength * m_segmentNumber 
     
-    m_phaseOffset = math.pi * 2.0 / (m_segmentNumber / m_curveNumber )
     m_wavePeriod = 1.0
-    m_waveFreq  = math.pi * 2.0 / m_wavePeriod 
-    
-    m_waveAmplitude = math.pi * 2.0 * ( 10.0 / 360.0 )
-    
+
+    #m_waveFreq  = math.pi * 2.0 / m_wavePeriod    
+    #m_waveAmplitude = math.pi * 2.0 * ( 10.0 / 360.0 )
+    #m_phaseOffset = math.pi * 2.0 / (m_segmentNumber / m_curveNumber )
+    #m_steering = 0.0    
+    m_waveFreq  = [] 
+    m_waveAmplitude = [] 
+    m_phaseOffset = [] 
+    m_steering = []
+
     m_offsetMin = -math.pi * (20.0 / 180.0)
     m_offsetMax =  math.pi * (20.0 / 180.0)
     
     #our steering value
-    m_steering = 0.0
+
     init_pos = []
     init_ori = []
     end_pos = []
@@ -86,7 +95,6 @@ class RobotSim:
     rewardtable = [] 
 
     gridtable = []
-    
     
     #def calc_array_index(self, col, row):
     #return 
@@ -174,6 +182,7 @@ class RobotSim:
                                               useMaximalCoordinates=useMaximalCoordinates)
                 
                 point1 = GridClass(self.gridwidth *  (i) , self.gridwidth *  (j), self.gridwidth *  (i + 1) , self.gridwidth *  (j + 1))
+                point1.indexnum = len( self.gridtable)
                 self.gridtable.append(point1)
                     
                 sphereUid = p.createMultiBody(mass,
@@ -183,6 +192,7 @@ class RobotSim:
                                               useMaximalCoordinates=useMaximalCoordinates)            
                 
                 point2 = GridClass(self.gridwidth * -(i) , self.gridwidth *  (j), self.gridwidth * -(i + 1) , self.gridwidth *  (j + 1))
+                point2.indexnum = len( self.gridtable)
                 self.gridtable.append(point2)
 
                 sphereUid = p.createMultiBody(mass,
@@ -192,6 +202,7 @@ class RobotSim:
                                               useMaximalCoordinates=useMaximalCoordinates)            
                 
                 point3 = GridClass(self.gridwidth *  (i) , self.gridwidth * -(j), self.gridwidth *  (i + 1) , self.gridwidth *  -(j + 1))
+                point3.indexnum = len( self.gridtable)
                 self.gridtable.append(point3)
 
                 sphereUid = p.createMultiBody(mass,
@@ -201,10 +212,11 @@ class RobotSim:
                                               useMaximalCoordinates=useMaximalCoordinates)            
                 
                 point4 = GridClass(self.gridwidth * -(i) , self.gridwidth * -(j), self.gridwidth * -(i + 1) , self.gridwidth *  -(j + 1))
+                point4.indexnum = len( self.gridtable)
                 self.gridtable.append(point4)
 
         for grid in self.gridtable:
-            print( "[(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
+            print( "[" + str(grid.indexnum) +":(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
         print(len(self.gridtable))
 
         
@@ -244,10 +256,10 @@ class RobotSim:
         p.resetBasePositionAndOrientation(robot_id,[ self.gridwidth * 0.5, 0.0, 0.1],[0.0, 0.0, 0.0, 1.0])    
 
     def printparam(self):
-        print("m_waveAmplitude = %f"% self.m_waveAmplitude)
-        print("m_waveFreq = %f"% self.m_waveFreq)
-        print("m_phaseOffset = %f"% self.m_phaseOffset)
-        print("m_steering = %f"% self.m_steering)    
+        print("m_waveAmplitude : ", self.m_waveAmplitude)
+        print("m_waveFreq : ", self.m_waveFreq)
+        print("m_phaseOffset : ", self.m_phaseOffset)
+        print("m_steering : ", self.m_steering)    
         
     def __init__(self):
         physicsClient = p.connect(p.GUI)#or p.DIRECT for non-graphical version
@@ -279,48 +291,33 @@ class RobotSim:
         self.init_pos,self.init_ori = p.getBasePositionAndOrientation(self.robotId)
         
         print("start: " + str(self.init_pos))
-        
+
         while self.t_sim < self.robot_sim_period : #True:
-
-            #print("t = " + str(self.t_sim))
+            pos,ori = p.getBasePositionAndOrientation(self.robotId)
+            gridindex = 0
             
-            keys = p.getKeyboardEvents()
-            for k, v in keys.items():
-
-                if (k == p.B3G_UP_ARROW and (v & p.KEY_WAS_TRIGGERED)):
-                    self.reset_robot(self.robotId)
-
-
-                if (k == p.B3G_RIGHT_ARROW and (v & p.KEY_WAS_TRIGGERED)):
-                    self.m_steering = self.m_steering - 0.01
-                    if self.m_steering < self.m_offsetMin: 
-                        self.m_steering = self.m_offsetMin
-
-                #    if (k == p.B3G_RIGHT_ARROW and (v & p.KEY_WAS_RELEASED)):
-                #      m_steering = 0
-
-                if (k == p.B3G_LEFT_ARROW and (v & p.KEY_WAS_TRIGGERED)):
-                    self.m_steering = self.m_steering + 0.01
-                    if self.m_steering > self.m_offsetMax: 
-                        self.m_steering = self.m_offsetMax
-
-                #if (k == p.B3G_LEFT_ARROW and (v & p.KEY_WAS_RELEASED)):
-                #      m_steering = 0
-                ##
-
-            ##  angle(n,t) = A * sin(w t + n * phi) 
-
+            for grid in self.gridtable:
+                if grid.is_withingrid(pos) == 1:
+                    print( pos )
+                    print( "[" + str(grid.indexnum) +":(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
+                    gridindex = grid.indexnum
+                    
             jointx = []
             jointy = []
 
             jointx.clear()
             jointy.clear()
 
+            m_waveAmplitude = self.m_waveAmplitude[gridindex]
+            m_waveFreq = self.m_waveFreq[gridindex]
+            m_phaseOffset = self.m_phaseOffset[gridindex]
+            m_steering = self.m_steering[gridindex]
+            
             for i in range(len(section_joints)) :
                 joint = section_joints[i] 
                 m_velocity = 0.8
-
-                phase =  self.m_waveAmplitude * math.sin( self.m_waveFreq * self.t_sim - ((i -4)  *  self.m_phaseOffset )) - self.m_steering 
+                
+                phase =  m_waveAmplitude * math.sin( m_waveFreq * self.t_sim - ((i -4)  *  m_phaseOffset )) - m_steering 
 
                 link_state =  p.getLinkState(self.robotId,joint)
                 jointx.append(link_state[0][1])
@@ -355,10 +352,13 @@ class RobotSim:
             p.stepSimulation()
             self.t_sim += self.dt_sim
             pos,ori = p.getBasePositionAndOrientation(self.robotId)
+            #for grid in self.gridtable:
+                
+            
             if pos[2] > 0.1 :
                 print( "pos[2] = ",pos[2])
                 self.t_sim = self.robot_sim_period
-            
+                
         self.end_pos,self.end_ori = p.getBasePositionAndOrientation(self.robotId)
         print("end : " + str(self.end_pos))
         
@@ -367,20 +367,19 @@ class RobotSim:
        
 robotsim = RobotSim()
 
-robotsim.m_waveAmplitude = 4.315718403214737
-robotsim.m_waveFreq = 1.9506199911905657
-robotsim.m_phaseOffset = 0.6375509005797202
-robotsim.m_steering = -0.011831502522241223
+#robotsim.m_waveAmplitude = 4.315718403214737
+#robotsim.m_waveFreq = 1.9506199911905657
+#robotsim.m_phaseOffset = 0.6375509005797202
+#robotsim.m_steering = -0.011831502522241223
 
-robotsim.one_trial()
-print("Restart")
-robotsim.one_trial()
-
-print("start:")
-print(robotsim.init_pos)
-print("end:")
-print(robotsim.end_pos)
-
+#robotsim.one_trial()
+#print("Restart")
+#robotsim.one_trial()
+#
+#print("start:")
+#print(robotsim.init_pos)
+#print("end:")
+#print(robotsim.end_pos)
 
 import random 
 
@@ -400,10 +399,11 @@ def calc_dist(a1,b1):
 
 def calc_eval(individual):
     # phase =  self.m_waveAmplitude * math.sin( self.m_waveFreq * self.t_sim - ((i -4)  *  self.m_phaseOffset )) - self.m_steering 
-    robotsim.m_waveAmplitude = individual[0]
-    robotsim.m_waveFreq = individual[1]
-    robotsim.m_phaseOffset = individual[2]
-    robotsim.m_steering = individual[3]
+    for i in range(len(robotsim.gridtable)):
+        robotsim.m_waveAmplitude[i] = individual[i*4+0]
+        robotsim.m_waveFreq[i] = individual[i*4+1]
+        robotsim.m_phaseOffset[i] = individual[i*4+2]
+        robotsim.m_steering[i] = individual[i*4+3]
 
     robotsim.printparam()            
     robotsim.one_trial()
