@@ -47,7 +47,7 @@ class RobotSim:
 
     robot_sim_period = 300
     
-    gridwidth = 0.18 
+    gridwidth = 0.33 # 0.18 
     cylinderRadius = 0.02
     cylinderHeight = 0.75
     
@@ -79,8 +79,8 @@ class RobotSim:
     m_phaseOffset = [] 
     m_steering = []
 
-    m_offsetMin = -math.pi * (20.0 / 180.0)
-    m_offsetMax =  math.pi * (20.0 / 180.0)
+    m_offsetMin = -math.pi * (60.0 / 180.0)
+    m_offsetMax =  math.pi * (60.0 / 180.0)
     
     #our steering value
 
@@ -318,16 +318,15 @@ class RobotSim:
             
             for grid in self.gridtable:
                 if grid.is_withingrid(pos) == 1:
-                    
                     gridindex = grid.indexnum
                     if grid.visited == 0 : 
                         print( "visited cell:[" + str(grid.indexnum) +":(" + str(grid.pointx1) + "," +str(grid.pointy1) + "),(" + str(grid.pointx2) + "," +str(grid.pointy2) + ")]" )
                         #print("visited pos ", pos )
-                        pos_p = np.array(pre_pos)
-                        pos_q = np.array(pos)
-                        self.traveled = self.traveled + np.linalg.norm(pos_q-pos_p)
                     grid.visited = 1
 
+            pos_p = np.array(pre_pos)
+            pos_q = np.array(pos)
+            self.traveled = self.traveled + np.linalg.norm(pos_q-pos_p)
 
             pre_pos = pos
             pre_ori = ori
